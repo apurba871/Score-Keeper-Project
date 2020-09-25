@@ -13,12 +13,16 @@ p1Button.addEventListener("click", function() {
     if (p1Score < target.textContent && p2Score < target.textContent)
         p1Score++;
     player1_score.textContent = p1Score;
+    if (p1Score == target.textContent)
+        player1_score.classList.add("winner");
 });
 
 p2Button.addEventListener("click", function() {
     if (p2Score < target.textContent && p1Score < target.textContent)
         p2Score++;
     player2_score.textContent = p2Score;
+    if (p2Score == target.textContent)
+        player2_score.classList.add("winner");
 });
 
 resetButton.addEventListener("click", resetPlayerScores);
@@ -28,4 +32,6 @@ function resetPlayerScores() {
     p2Score = 0;
     player1_score.textContent = 0;
     player2_score.textContent = 0;
+    player1_score.classList.remove("winner");
+    player2_score.classList.remove("winner");
 }
