@@ -1,5 +1,6 @@
 var p1Button = document.querySelector("#p1");
 var p2Button = document.querySelector("#p2");
+var resetButton = document.getElementById("reset");
 
 var p1Score = 0, p2Score = 0;
 
@@ -19,3 +20,12 @@ p2Button.addEventListener("click", function() {
         p2Score++;
     player2_score.textContent = p2Score;
 });
+
+resetButton.addEventListener("click", resetPlayerScores);
+
+function resetPlayerScores() {
+    p1Score = 0;
+    p2Score = 0;
+    player1_score.textContent = 0;
+    player2_score.textContent = 0;
+}
