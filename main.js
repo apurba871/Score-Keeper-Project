@@ -41,4 +41,4 @@ function resetPlayerScores() {
 numInput.addEventListener("change", function() {
     target = numInput.value;
     target_score.textContent = target;
-})
+});
