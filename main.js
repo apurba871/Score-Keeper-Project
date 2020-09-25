@@ -12,13 +12,8 @@ var target_score = document.querySelector("#target_score");
 var target = 5;
 
 p1Button.addEventListener("click", function() {
-    console.log("Inside player 1")
-    console.log(p1Score);
-    console.log(target);
     if (p1Score < target && p2Score < target)
         p1Score++;
-        console.log(p1Score);
-        console.log(target);
     player1_score.textContent = p1Score;
     if (p1Score == target)
         player1_score.classList.add("winner");
